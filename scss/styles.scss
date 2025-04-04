@@ -1,0 +1,145 @@
+$font-family: 'Lato', sans-serif;
+$primary-color: #3a70aa;
+$background-image: url('../MEDIA/img1.jpg');
+
+body {
+    font-family: $font-family;
+    background: $background-image no-repeat center center / cover;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+
+    main {
+        margin: 50px;
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+        background-color: rgba($primary-color, 0.38);
+        border-radius: 7px;
+        margin: 10px 620px;
+        padding: 5px 0 7px;
+        font-size: 20px;
+    }
+}
+
+#kanban {
+    overflow: hidden;
+
+    .column {
+        float: left;
+        width: 17%;
+        margin-right: 2%;
+        background-color: #ffffff9c;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        h2 {
+            margin: 0;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            text-align: left;
+            font-size: 16px;
+            color: #333;
+        }
+    }
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 10px;
+    position: relative;
+
+    h3 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    p {
+        margin: 0;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .tags {
+        margin-top: 10px;
+
+        .tag {
+            display: inline-block;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 5px;
+
+            i {
+                font-size: 10px;
+                color: #ffffff;
+                display: block;
+                line-height: 1;
+                padding-top: 5px;
+            }
+
+            &.front {
+                background-color: #7ce484;
+                border-color: #57c75a;
+            }
+
+            &.back {
+                background-color: #f37657;
+                border-color: #f04023;
+            }
+
+            &.device {
+                background-color: #f5c972;
+                border-color: #fff4d3;
+            }
+        }
+    }
+
+    &::after {
+        content: "×";
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        font-size: 16px;
+        color: white;
+        cursor: pointer;
+        background-color: red;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        line-height: 13px;
+        text-align: center;
+    }
+
+    &:hover {
+        background-color: #558eb7d2;
+
+        h3,
+        p {
+            color: #fff;
+        }
+
+        .tag i {
+            color: #558eb7d2;
+        }
+
+        &::after {
+            background-color: #333;
+        }
+    }
+}
