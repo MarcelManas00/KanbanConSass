@@ -1,147 +1,126 @@
+@charset "UTF-8";
 body {
-    font-family: 'Lato', sans-serif;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    background-image: url('../MEDIA/img1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    font-size: 12px;
+  font-family: "Lato", sans-serif;
+  background: url("../media/img1.jpg") no-repeat center center/cover;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
 }
-
-main {
-    margin: 50px;
+body main {
+  margin: 50px;
 }
-
-
-h1 {
-    text-align: center;
-    color: white;
-    background-color: rgba(58, 112, 170, 0.38);
-    border-radius: 7px;
-    margin: 10px 620px;
-    padding: 5px 0 7px;
-    font-size: 20px;
+body h1 {
+  text-align: center;
+  color: white;
+  background-color: rgba(58, 112, 170, 0.38);
+  border-radius: 7px;
+  margin: 10px 620px;
+  padding: 5px 0 7px;
+  font-size: 20px;
 }
 
 #kanban {
-    overflow: hidden; 
+  overflow: hidden;
 }
-
-.column {
-    float: left;
-    width: 17%; 
-    margin-right: 2%;
-    background-color: #ffffff9c;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+#kanban .column {
+  float: left;
+  width: 17%;
+  margin-right: 2%;
+  background-color: rgba(255, 255, 255, 0.6117647059);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
 }
-
-.column:last-child {
-    margin-right: 0; 
+#kanban .column:last-child {
+  margin-right: 0;
 }
-
-.column h2 {
-    margin: 0;
-    padding: 10px;
-    border-radius: 5px 5px 0 0;
-    text-align: left;
-    font-size: 16px;
-    color: #333;
+#kanban .column h2 {
+  margin: 0;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  text-align: left;
+  font-size: 16px;
+  color: #333;
 }
 
 .card {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    margin-bottom: 10px;
-    position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 10px;
+  position: relative;
 }
-
 .card h3 {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    color: #333;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #333;
 }
-
 .card p {
-    margin: 0;
-    color: #666;
-    margin-bottom: 20px;
+  margin: 0;
+  color: #666;
+  margin-bottom: 20px;
 }
-
-.tags {
-    margin-top: 10px;
+.card .tags {
+  margin-top: 10px;
 }
-
-.tag {
-    display: inline-block;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    line-height: 30px; 
-    margin-right: 5px;
+.card .tags .tag {
+  display: inline-block;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 5px;
 }
-
-.tag i {
-    font-size: 10px;
-    color: #ffffff;
-    display: block;
-    line-height: 1;
-    padding-top: 5px;
+.card .tags .tag i {
+  font-size: 10px;
+  color: #ffffff;
+  display: block;
+  line-height: 1;
+  padding-top: 5px;
 }
-
-.tag.front {
-    background-color: #7ce484;;
-    border-color: #57c75a;
+.card .tags .tag.front {
+  background-color: #7ce484;
+  border-color: #57c75a;
 }
-
-.tag.back {
-    background-color: #f37657;
-    border-color: #f04023;
+.card .tags .tag.back {
+  background-color: #f37657;
+  border-color: #f04023;
 }
-
-.tag.device {
-    background-color: #f5c972;
-    border-color: #fff4d3;
+.card .tags .tag.device {
+  background-color: #f5c972;
+  border-color: #fff4d3;
 }
-
 .card::after {
-    content: "×";
-    position: absolute;
-    top: 8px;
-    right: 12px;
-    font-size: 16px;
-    color: white;
-    cursor: pointer;
-    background-color: red;
-    border-radius: 20px;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    line-height: 13px;
-    text-align: center;
+  content: "×";
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  background-color: red;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  line-height: 13px;
+  text-align: center;
 }
-
 .card:hover {
-    background-color: #558eb7d2;
+  background-color: rgba(85, 142, 183, 0.8235294118);
 }
-
 .card:hover h3,
 .card:hover p {
-    color: #fff;
+  color: #fff;
 }
-
 .card:hover .tag i {
-    color: #558eb7d2;
+  color: rgba(85, 142, 183, 0.8235294118);
+}
+.card:hover::after {
+  background-color: #333;
 }
 
-.card:hover::after{
-    background-color: #333;
-}
+/*# sourceMappingURL=styles.css.map */
